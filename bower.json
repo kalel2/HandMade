@@ -19,5 +19,13 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "bootstrap": "~3.3.6"
+  },
+  "overrides": {
+    "bootstrap": {
+    "main": [
+        "dist/css/bootstrap.min.css",
+        "dist/js/bootstrap.min.js"
+        ]
+    }
   }
 }

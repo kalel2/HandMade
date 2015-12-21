@@ -1,3 +1,8 @@
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 hand_made:
     resource: "@HandMadeBundle/Controller/"
     type:     annotation

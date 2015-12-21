@@ -16,3 +16,4 @@
 /web/bundles/
 nbproject*
 /nbproject/private/
+bower_components*

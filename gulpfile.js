@@ -6,9 +6,11 @@ var paths = {
     dist: {
         js: './web/dist/js/',
         css: './web/dist/css/',
+        fonts: './web/dist/fonts/'
     },
     bower: './bower_components/',
-    npm: './node_modules/'
+    npm: './node_modules/',
+    font: './bower_components/bootstrap/dist/fonts/*'
 };
 /**
  * VENDOR tasks
@@ -32,6 +34,10 @@ gulp.task('vendor:js', function() {
             .pipe(plugins.uglify())
             .pipe(plugins.sourcemaps.write('.'))
             .pipe(gulp.dest(paths.dist.js));
+});
+gulp.task('vendor:fonts', function() {
+    return gulp.src(paths.font)
+           .pipe(gulp.dest(paths.dist.fonts));
 });
 
 gulp.task('vendor', [

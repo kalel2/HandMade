@@ -1,3 +1,11 @@
+hand_made_category:
+    resource: "@HandMadeBundle/Controller/CategoryController.php"
+    type:     annotation
+
+hand_made_product:
+    resource: "@HandMadeBundle/Controller/ProductController.php"
+    type:     annotation
+
 user:
     resource: "@UserBundle/Controller/"
     type:     annotation

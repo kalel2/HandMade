@@ -8,6 +8,9 @@ var paths = {
         css: './web/dist/css/',
         fonts: './web/dist/fonts/'
     },
+    src: {
+        less : './src/HandMadeBundle/Resources/public/less/app.less'
+    },
     bower: './bower_components/',
     npm: './node_modules/',
     font: './bower_components/bootstrap/dist/fonts/*'
@@ -46,4 +49,11 @@ gulp.task('vendor', [
 ], function() {
     gulp.src('')
             .pipe(plugins.notify('task VENDOR is completed'));
+});
+gulp.task('app-less', function() {
+    gulp.src(paths.src.less)
+        .pipe(plugins.less())
+        .pipe(plugins.minifyCss())
+        .pipe(plugins.rename('app.min.css'))
+        .pipe(gulp.dest(paths.dist.css));
 });
